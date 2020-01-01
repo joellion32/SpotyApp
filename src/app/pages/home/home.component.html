@@ -1,0 +1,10 @@
+<app-loading *ngIf="!loading"></app-loading>
+
+<div *ngIf="error" class="alert alert-danger animated fadeIn" role="alert">
+    <h3>Error</h3>
+    <p>{{this.mensajeerror}}</p>
+</div>
+
+<div class="card-columns">
+<app-artista [artista]="artista" *ngFor="let artista of artistas"></app-artista>
+</div>
